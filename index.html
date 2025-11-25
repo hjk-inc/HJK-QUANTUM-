@@ -615,4 +615,332 @@ print(f"Success probability: {result['probability']:.4f}")</pre>
                     <p>Our quantum playground is built with Python at its core, providing seamless integration with the broader scientific Python ecosystem for maximum flexibility and extensibility.</p>
                     <p><strong>NumPy & SciPy Integration:</strong> Leverage the full power of numerical computing with direct integration of NumPy arrays and SciPy optimization algorithms.</p>
                     <p><strong>Machine Learning Libraries:</strong> Connect with scikit-learn, PyTorch, and TensorFlow for hybrid quantum-classical machine learning workflows and model training.</p>
-          
+                    <p><strong>Visualization Tools:</strong> Utilize Matplotlib, Plotly, and Seaborn for creating publication-quality visualizations of quantum states and algorithm results.</p>
+                    <div class="code-block">
+                        <pre># Example: Quantum Machine Learning with scikit-learn
+from sklearn.datasets import make_classification
+from quantum_core import QuantumAlgorithmSuite
+
+# Generate sample data
+X, y = make_classification(n_samples=100, n_features=4, 
+                          n_classes=2, random_state=42)
+
+# Train quantum SVM
+qsvm_result = quantum_system.quantum_machine_learning(
+    data=X, 
+    labels=y, 
+    algorithm="qsvm",
+    kernel='quantum'
+)
+
+print(f"Quantum SVM Accuracy: {qsvm_result['accuracy']:.4f}")</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo" id="demo">
+        <div class="container">
+            <h2 class="section-title">Interactive Quantum Simulator</h2>
+            <div class="demo-container">
+                <p>Experience our quantum computing playground with this interactive simulator. Visualize quantum states, apply quantum gates, and observe state transformations in real-time.</p>
+                
+                <div class="quantum-simulator">
+                    <div class="simulator-header">
+                        <h3>Quantum State Simulator</h3>
+                        <div class="simulator-info">
+                            <span class="qubit-count">Single Qubit Simulation</span>
+                        </div>
+                    </div>
+                    
+                    <div class="qubit-visualization">
+                        <div class="bloch-sphere">
+                            <div class="state-vector" id="stateVector"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="controls">
+                        <button class="control-btn" onclick="applyGate('H')">Hadamard (H)</button>
+                        <button class="control-btn" onclick="applyGate('X')">Pauli-X (X)</button>
+                        <button class="control-btn" onclick="applyGate('Y')">Pauli-Y (Y)</button>
+                        <button class="control-btn" onclick="applyGate('Z')">Pauli-Z (Z)</button>
+                        <button class="control-btn" onclick="applyGate('S')">Phase (S)</button>
+                        <button class="control-btn" onclick="applyGate('T')">T Gate</button>
+                        <button class="control-btn" onclick="resetState()">Reset to |0⟩</button>
+                    </div>
+                    
+                    <div class="state-info">
+                        <h4>Current Quantum State: <span id="currentState">|0⟩</span></h4>
+                        <p>State Vector: <span id="stateVectorText">[1, 0]</span></p>
+                        <p>Measurement Probabilities: <span id="probability">100% |0⟩, 0% |1⟩</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(0)">
+                        <span>What is the HJK Quantum Playground?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The HJK Quantum Playground is an advanced quantum computing simulation platform written in Python that provides comprehensive tools for quantum state management, gate operations, algorithm implementation, and visualization. It's designed for researchers, developers, and educators working in quantum computing.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(1)">
+                        <span>What quantum algorithms are implemented?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our platform includes implementations of Grover's search algorithm, Shor's factorization algorithm, Quantum Phase Estimation, Variational Quantum Eigensolver (VQE), Quantum Approximate Optimization Algorithm (QAOA), quantum walks, and various quantum machine learning algorithms including quantum support vector machines and quantum neural networks.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(2)">
+                        <span>How does it integrate with Python libraries?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The HJK Quantum Playground seamlessly integrates with NumPy for numerical computations, SciPy for scientific computing, scikit-learn for machine learning, PyTorch and TensorFlow for deep learning, and visualization libraries like Matplotlib and Plotly. This allows for hybrid quantum-classical workflows and extensive data analysis capabilities.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(3)">
+                        <span>Is it suitable for quantum computing education?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! The HJK Quantum Playground is an excellent educational tool for learning quantum computing concepts. With its interactive visualizations, comprehensive documentation, and practical examples, students can gain hands-on experience with quantum states, gates, and algorithms without needing access to physical quantum hardware.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(4)">
+                        <span>Can I contribute to the project?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We welcome contributions from the quantum computing community. The project is open source and hosted on GitHub. You can contribute by submitting bug reports, feature requests, documentation improvements, or code contributions through pull requests.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>HJK Quantum</h3>
+                    <p>Advanced quantum computing simulation platform for research, development, and education.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/hjk-inc/HJK-QUANTUM-"><i class="fab fa-github"></i></a>
+                        <a href="mailto:godmy5154@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Examples</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Quantum Algorithms</h3>
+                    <ul>
+                        <li><a href="#">Grover's Search</a></li>
+                        <li><a href="#">Shor's Algorithm</a></li>
+                        <li><a href="#">Quantum ML</a></li>
+                        <li><a href="#">VQE</a></li>
+                        <li><a href="#">QAOA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:godmy5154@gmail.com">Email: godmy5154@gmail.com</a></li>
+                        <li><a href="https://github.com/hjk-inc/HJK-QUANTUM-">GitHub Repository</a></li>
+                        <li><a href="#">Issue Tracker</a></li>
+                        <li><a href="#">Discussion Forum</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 HJK Quantum Research Team. All rights reserved. | Advanced Quantum Computing Simulation Platform</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Quantum state simulation for the demo
+        let currentState = 0; // 0 for |0⟩, 1 for |1⟩
+        let rotation = 0;
+        let phase = 0;
+        
+        function applyGate(gate) {
+            const stateVector = document.getElementById('stateVector');
+            const currentStateElement = document.getElementById('currentState');
+            const probabilityElement = document.getElementById('probability');
+            const stateVectorText = document.getElementById('stateVectorText');
+            
+            switch(gate) {
+                case 'H':
+                    // Hadamard gate creates superposition
+                    if (currentState === 0) {
+                        currentState = 0.5; // Superposition
+                        rotation = 45;
+                        currentStateElement.textContent = "(|0⟩ + |1⟩)/√2";
+                        probabilityElement.textContent = "50% |0⟩, 50% |1⟩";
+                        stateVectorText.textContent = "[0.7071, 0.7071]";
+                    } else if (currentState === 1) {
+                        currentState = 0.5; // Superposition
+                        rotation = 135;
+                        currentStateElement.textContent = "(|0⟩ - |1⟩)/√2";
+                        probabilityElement.textContent = "50% |0⟩, 50% |1⟩";
+                        stateVectorText.textContent = "[0.7071, -0.7071]";
+                    } else {
+                        // If in superposition, Hadamard brings back to basis state
+                        if (Math.random() > 0.5) {
+                            currentState = 0;
+                            rotation = 0;
+                            currentStateElement.textContent = "|0⟩";
+                            probabilityElement.textContent = "100% |0⟩, 0% |1⟩";
+                            stateVectorText.textContent = "[1, 0]";
+                        } else {
+                            currentState = 1;
+                            rotation = 180;
+                            currentStateElement.textContent = "|1⟩";
+                            probabilityElement.textContent = "0% |0⟩, 100% |1⟩";
+                            stateVectorText.textContent = "[0, 1]";
+                        }
+                    }
+                    break;
+                case 'X':
+                    // Pauli-X gate (bit flip)
+                    currentState = currentState === 0 ? 1 : 0;
+                    rotation = currentState === 0 ? 0 : 180;
+                    currentStateElement.textContent = currentState === 0 ? "|0⟩" : "|1⟩";
+                    probabilityElement.textContent = currentState === 0 ? "100% |0⟩, 0% |1⟩" : "0% |0⟩, 100% |1⟩";
+                    stateVectorText.textContent = currentState === 0 ? "[1, 0]" : "[0, 1]";
+                    break;
+                case 'Y':
+                    // Pauli-Y gate
+                    currentState = currentState === 0 ? 1 : 0;
+                    rotation = currentState === 0 ? 0 : 180;
+                    currentStateElement.textContent = currentState === 0 ? "|0⟩" : "|1⟩";
+                    probabilityElement.textContent = currentState === 0 ? "100% |0⟩, 0% |1⟩" : "0% |0⟩, 100% |1⟩";
+                    stateVectorText.textContent = currentState === 0 ? "[1, 0]" : "[0, 1]";
+                    break;
+                case 'Z':
+                    // Pauli-Z gate (phase flip)
+                    if (currentState === 0.5) {
+                        if (currentStateElement.textContent.includes('+')) {
+                            currentStateElement.textContent = "(|0⟩ - |1⟩)/√2";
+                            stateVectorText.textContent = "[0.7071, -0.7071]";
+                        } else {
+                            currentStateElement.textContent = "(|0⟩ + |1⟩)/√2";
+                            stateVectorText.textContent = "[0.7071, 0.7071]";
+                        }
+                    }
+                    // Visual effect for phase flip
+                    stateVector.style.animation = 'phaseFlip 0.5s';
+                    setTimeout(() => {
+                        stateVector.style.animation = '';
+                    }, 500);
+                    break;
+                case 'S':
+                    // Phase gate
+                    if (currentState === 0.5) {
+                        if (currentStateElement.textContent.includes('+')) {
+                            currentStateElement.textContent = "(|0⟩ + i|1⟩)/√2";
+                            stateVectorText.textContent = "[0.7071, 0.7071i]";
+                        } else {
+                            currentStateElement.textContent = "(|0⟩ - i|1⟩)/√2";
+                            stateVectorText.textContent = "[0.7071, -0.7071i]";
+                        }
+                    }
+                    break;
+                case 'T':
+                    // T gate
+                    if (currentState === 0.5) {
+                        currentStateElement.textContent = "General superposition state";
+                        stateVectorText.textContent = "[0.7071, complex]";
+                    }
+                    break;
+            }
+            
+            // Update visualization
+            stateVector.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
+        }
+        
+        function resetState() {
+            currentState = 0;
+            rotation = 0;
+            document.getElementById('stateVector').style.transform = 'translate(-50%, -50%) rotate(0deg)';
+            document.getElementById('currentState').textContent = '|0⟩';
+            document.getElementById('probability').textContent = '100% |0⟩, 0% |1⟩';
+            document.getElementById('stateVectorText').textContent = '[1, 0]';
+        }
+
+        // FAQ functionality
+        function toggleFAQ(index) {
+            const answers = document.querySelectorAll('.faq-answer');
+            const answer = answers[index];
+            
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+            } else {
+                // Close all other answers
+                answers.forEach(a => a.classList.remove('active'));
+                // Open this answer
+                answer.classList.add('active');
+            }
+        }
+
+        // Add some dynamic visual effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const hero = document.querySelector('.hero');
+            hero.style.opacity = 0;
+            let opacity = 0;
+            
+            const fadeIn = setInterval(() => {
+                opacity += 0.03;
+                hero.style.opacity = opacity;
+                if (opacity >= 1) clearInterval(fadeIn);
+            }, 30);
+            
+            // Add animation to feature cards on scroll
+            const featureCards = document.querySelectorAll('.feature-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            featureCards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s, transform 0.5s';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+    </html>
